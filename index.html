@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dafne's Bakery Bakery</title>
+    <!-- IMPORT FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="nav.js" defer></script>
+</head>
+
+<body>
+<!-- SECTION: HEADER -->
+    <header>
+        <div class="primary-header flex container">
+            <h2 class="logo"><a href="#">Dafne's Bakery</a></h2>
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"><span
+                    class="sr-only">Menu</span></button>
+            <nav>
+                <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
+                    <li class="active">
+                        <a href="#">Inicio</a>
+                    </li>
+                    <li><a href="#">Pasteles y Pies</a></li>
+                    <li><a href="#">Galletas</a></li>
+                    <li><a href="#">Otros</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!-- SECTION: HERO -->
+        <div id="hero-section" class="hero">
+            <div class="container hero-container">
+                <h1 class="hero-title">Dafne's Bakery</h1>
+                <h3 class="hero-subtitle">¡Repostería de Calidad!</h3>
+                <a href="" class="button-primary hero-cta">Ver Pasteles</a>
+            </div>
+        </div>
+        <!-- SECTION: PRODUCTOS DESTACADOS -->
+        <div class="featured-section">
+            <div class="container">
+                <h2 class="section-heading">Productos Destacados</h2>
+                <div class="grid-container">
+                    <div class="card">
+                        <div class="card-img-container">
+                            <img src="https://jennakateathome.com/wp-content/uploads/2022/02/fresh-fruit-cake-27.jpg"
+                                alt="Tartaleta de Frutas" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Tartaleta de Frutas</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At autem iste
+                                molestias nisi, vel ex optio rem cum id ratione nobis distinctio</p>
+                            <a href="" class="button-primary card-cta">Comprar</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img-container">
+                            <img src="https://cdn.pixabay.com/photo/2017/01/11/11/33/cake-1971552_960_720.jpg"
+                                alt="Another Cake" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Chocolate Cake</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At autem iste
+                                molestias nisi, vel ex optio rem cum id ratione nobis distinctio</p>
+                            <a href="" class="button-primary card-cta">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img-container"><img
+                                src="https://www.simplyrecipes.com/thmb/ZlneAHm5YFTLLTiZi7GBZv4Q23c=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Strawberry-Shortcake-LEAD-03-810bac55a6e3461fb92c909db4dbbb61.jpg"
+                                alt="One more cake" class="card-img"></div>
+                        <div class="card-body">
+                            <h3 class="card-title">Strawberry Shortcake</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At autem iste
+                                molestias nisi, vel ex optio rem cum id ratione nobis distinctio</p>
+                            <a href="" class="button-primary card-cta">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- SECTION: DE TEMPORADA (SEASONAL) -->
+        <div class="seasonal-section" id="seasonal-section">
+            <div class="seasonal-heading-line">
+                <div class="seasonal-heading-circle">
+                    <h2 class="section-heading">De Temporada</h2>
+                </div>
+            </div>
+            <div id="seasonal-slider" class="slider">
+                <div class="slider-content">
+                    <img src="assets/Cake_Decoration_2000x1000.webp" alt="Cake Decoration">
+                    <div class="slider-description">
+                        <img src="assets/dafnes_bakery_primary_faded.webp" alt="Dafne's Bakery Logo">
+                        <h3 class="slider-content-title">Pastel de Fruta</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="seasonal-heading-line"></div>
+
+<!-- SECTION: TESTIMONIALS -->
+        <div class="testimonials-section">
+            <div class="container">
+                <h2 class="section-heading">¿Qué dicen nuestros clientes?</h2>
+                <div class="slider-testimonials">
+                    <div class="testimonial-content">
+                        <img class="testimonial-img" src="https://www.w3schools.com/howto/img_avatar.png" alt="avatar.png">
+                        <div class="testimonial-text">
+                            <p class="testimonial-paragraph">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa deleniti ex commodi saepe voluptas atque qui deserunt odio vero, dolorum minus nemo sequi esse eaque quis incidunt corrupti harum doloremque? Lorem ipsum dolor sit amet consectetur, adipisicing elit."</p>
+                            <p class="testimonial-author">John Appleseed</p>
+                            <p class="testimonial-author-title">CEO | Apple Trees Co.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- SECTION: FOOTER -->
+    <footer>
+        <div class="footer-1">
+            <div class="container">
+                <div class="footer-container">
+                    <h2 class="logo">Dafne's Bakery</h2>
+                    <div class="sitemap">
+                        <div class="sitemap-1">
+                            <a href="#">Inicio</a>
+                            <a href="#">Pasteles</a>
+                            <a href="#">Pies</a>
+                            <a href="#">Galletas</a>
+                            <a href="#">Otros</a>
+                        </div>
+                        <div class="sitemap-2">
+                            <h3>Contacto</h3>
+                            <a href="#">WhatsApp</a>
+                            <a href="#">Chat en Vivo</a>
+                            <a href="tel:+50222222222">+502 2222-2222</a>
+                            <a href="mailto:info@dafnesbakery.com">info@dafnesbakery.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <p class="copyright-text">2022 © Dafne's Bakery | Website by <a href="#">Pablo Prado</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

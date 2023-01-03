@@ -1,0 +1,539 @@
+/* CSS RESET */
+
+/* makes sizing simpler
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+} */
+
+/* remove default spacing */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* dark mode user-agent-styles */
+
+html {
+    color-scheme: dark light;
+}
+
+/* min body height
+   improve text rendering */
+
+body {
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* responsive images/videos */
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+/* Remove built-in form typography styles */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* CSS RESET END */
+
+/* PRE DEFINED CLASSES */
+
+:root {
+    --color-primary: #3e064c;
+    --color-primary-light: #ae8da7;
+    --color-primary-light-hover:#cfafc8;
+    --color-primary-hover: #713181;
+    --color-text-light: #fff;
+    --color-text-light-hover: #ae8da7;
+    --color-text-dark: #1e0d33;
+    --color-text-dark-hover: #3e064c;
+    --color-text-primary-dark: #3e064c;
+    --color-background-white: #fff;
+    --color-background-light: #efeeef;
+    --color-background-light-purple: #ae8da7;
+    --color-background-dark: #1e0d33;
+
+    --box-shadow-light: 4px 4px 10px 0px rgba(0, 0, 0, 0.2);
+
+    --card-border-radius: 20px;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background-light);
+    overflow-x: hidden;
+}
+
+p,
+a {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2 {
+    font-family: 'Dancing Script', cursive;
+}
+
+h1 a,
+h2 a {
+    font-family: 'Dancing Script', cursive;
+}
+
+h1 {
+    font-size: 4.5rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3,
+h4,
+h5 {
+    font-family: 'Montserrat Thin', sans-serif;
+    font-weight: light;
+}
+
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+/* SECTION HEADINGS */
+
+h2.section-heading {
+    color: var(--color-text-primary-dark);
+    margin: 60px 0;
+}
+
+/* UTILITY */
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    /* background-color: hsl(0 0% 100% / 0.1); */
+}
+
+/* BUTTONS */
+.button-primary {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-text-light);
+    font-weight: 300;
+    padding: 15px 30px;
+    background-color: var(--color-primary);
+    border-radius: 5px;
+}
+
+.button-primary:hover {
+    background-color: var(--color-primary-hover);
+}
+
+/* SECTION: HEADER */
+
+.primary-header .logo {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+header {
+    background-color: var(--color-background-dark);
+    color: var(--color-text-light);
+    height: 90px;
+}
+
+.primary-header {
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.primary-header h2 a {
+    text-decoration: none;
+    color: var(--color-text-light);
+}
+
+.primary-header h2 a:hover {
+    color: var(--color-text-light-hover);
+}
+
+nav {
+    padding: 0;
+}
+
+.primary-navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: hsl(0 0% 100% / 0.1);
+    backdrop-filter: blur(1rem);
+    height: 100%;
+    --gap: clamp(1.5rem, 5vw, 3rem);
+
+}
+
+.primary-navigation li {
+    height: 100%;
+    background-color: red;
+}
+
+.primary-navigation a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    background-color: rgba(229, 196, 146, 0.156);
+    height: 100%;
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+.sr-only {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    /* visibility: hidden; */
+}
+
+/* @media(max-width:35em){
+    .primary-navigation{
+        --gap: 2em;
+
+        position: fixed;
+        z-index: 1000;
+        inset: 0 0 0 30%;
+
+        flex-direction: column;
+        padding: min(30vh, 10rem) 2em;
+
+        transform: translateX(100%);
+        transition: transform 350ms ease-out;
+
+    }
+    
+    .primary-navigation[data-visible="true"]{
+        transform: translateX(0%);
+    }
+
+    .mobile-nav-toggle{
+        display: block;
+        position: absolute;
+        z-index: 9999;
+        background-color: transparent;
+        border:0;
+        background-image: url("assets/icon-hamburger.svg");
+        width: 2rem;
+        aspect-ratio: 1;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    .mobile-nav-toggle[aria-expanded="true"]{
+        background-image: url("assets/icon-close.svg");
+    }
+}
+*/
+
+/* SECTION: HERO */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 600px;
+    color: var(--color-text-light);
+    background-color: var(--color-background-dark);
+    background-image:
+        linear-gradient(0deg, rgba(24, 16, 26, 0.5) 0%, rgba(24, 16, 26, 0.4) 100%),
+        url('https://cdn.pixabay.com/photo/2016/05/05/14/57/cake-1374058_960_720.jpg');
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+}
+
+.hero-subtitle {
+    padding: 20px;
+}
+
+
+/* SECTION: PRODUCTOS DESTACADOS */
+
+.featured-section {
+    background-color: var(--color-background-light);
+    background-image: url("../assets/dafnes\ bakery\ web\ logos-10.png");
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+    color: var(--color-text-dark);
+    padding-block: 60px 200px;
+    text-align: center;
+}
+
+.featured-section h2 {
+    margin-block: 100px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.card {
+    height: 100%;
+    box-shadow: var(--box-shadow-light);
+    background: transparent;
+    border-radius: var(--card-border-radius);
+    /* overflow: hidden; */
+}
+
+.card-img-container {
+    border-radius: var(--card-border-radius) var(--card-border-radius) 0 0;
+    overflow: hidden;
+}
+
+/* TODO sCROP ALL IMAGES FOR THIS SECTION WITH A 3/2 ASPECT RATIO */
+.card-img {
+    border-radius: var(--card-border-radius) var(--card-border-radius) 0px 0px;
+    transition: 0.75s all ease-in-out;
+    max-height: 100%;
+    aspect-ratio: 3/2;
+}
+
+.card:hover img {
+    transform: scale(1.25);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+    background-color: var(--color-background-white);
+    max-height: 100%;
+    padding: 30px;
+    border-radius: 0 0 var(--card-border-radius) var(--card-border-radius);
+}
+
+.card-body * {
+    margin-block: 10px;
+}
+
+
+
+/* SECTION: DE TEMPORADA (SEASONAL) */
+
+.seasonal-heading-line {
+    background-color: var(--color-primary-light);
+    height: 40px;
+
+}
+
+.seasonal-heading-circle {
+    background-color: var(--color-primary-light);
+    height: 120px;
+    width: 450px;
+    border-radius: 35px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: auto;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seasonal-heading-circle .section-heading {
+    color: var(--color-text-light);
+}
+
+.slider {
+    /* max-height: 200px; */
+}
+
+/* Make sure to crop images to the 2/1 aspect ratio! */
+.slider-content {
+    width: 100%;
+    aspect-ratio: 2/1;
+        overflow: hidden;
+}
+
+.slider-content img {
+    object-fit: cover;
+    object-position: center center;
+}
+
+.slider-description {
+    /* background-color: black; */
+    color: white;
+    max-width: 400px;
+    position: relative;
+    left: 70%;
+    bottom: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.slider-description img {
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.slider-description h3 {
+    background-color: var(--color-primary-light);
+    border-radius: 20px;
+    padding: 20px 40px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 300;
+    font-size: 2.5rem;
+}
+
+
+/* SECTION: TESTIMONIALS */
+
+.testimonials-section {
+    color: var(--color-text-dark);
+    padding-block: 80px 160px;
+    text-align: center;
+}
+
+.testimonial-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial-img {
+    border-radius: 50%;
+    margin-inline: 40px;
+    max-height: 300px;
+}
+
+.testimonial-text {
+    text-align: left;
+}
+
+.testimonial-paragraph {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    color: var(--color-text-dark);
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.testimonial-author {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.3rem;
+    color: var(--color-text-dark);
+}
+
+.testimonial-author-title {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* SECTION: FOOTER */
+
+.footer-1 {
+    background-color: var(--color-background-light-purple);
+    padding: 100px 0;
+}
+.footer-1 .logo {
+    color: var(--color-text-primary-dark);
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sitemap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sitemap div {
+    margin-inline: 60px;
+}
+
+.sitemap h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: 'Montserrat Semibold', sans-serif;
+    color: var(--color-text-primary-dark);
+    padding-inline: 20px;
+}
+
+.sitemap div a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: var(--color-text-primary-dark);
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 2rem;
+    padding-inline: 20px;
+}
+
+.sitemap div a:hover {
+    background-color: var(--color-primary-light-hover);
+}
+
+/* SECTION: COPYRIGHT */
+
+.copyright {
+    background-color: var(--color-background-dark);
+    padding-block: 20px;
+}
+
+.copyright p {
+    color: var(--color-text-light);
+    text-align: center;
+}
+
+.copyright a {
+    color: var(--color-text-light-hover);
+    text-decoration: none;
+}
+
+.copyright a:hover {
+    color: var(--color-primary-hover);
+}
