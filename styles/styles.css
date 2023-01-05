@@ -287,7 +287,7 @@ h2.section-heading {
     color: var(--color-text-light);
     background-color: var(--color-background-dark);
     background-image:
-        linear-gradient(0deg, rgba(24, 16, 26, 0.5) 0%, rgba(24, 16, 26, 0.4) 100%),
+        linear-gradient(0deg, rgba(24, 16, 26, 0.4) 0%, rgba(24, 16, 26, 0.3) 100%),
         url('https://cdn.pixabay.com/photo/2016/05/05/14/57/cake-1374058_960_720.jpg');
     background-position: center;
     /* Center the image */
@@ -356,7 +356,7 @@ h2.section-heading {
 }
 
 .card:hover img {
-    transform: scale(1.25);
+    transform: scale(1.1);
 }
 
 .card-body {
@@ -404,9 +404,9 @@ h2.section-heading {
     color: var(--color-text-light);
 }
 
-.slider {
-    /* max-height: 200px; */
-}
+/* .slider {
+    max-height: 200px;
+} */
 
 /* Make sure to crop images to the 2/1 aspect ratio! */
 .slider-content {
