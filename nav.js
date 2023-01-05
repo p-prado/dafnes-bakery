@@ -13,3 +13,12 @@ navToggle.addEventListener('click', ()=> {
         navToggle.setAttribute('aria-expanded', false);
     }
 })
+
+// CHANGE NAV COLOR ON SCROLL
+// document.querySelector(window).scroll(function() {
+//     if (document.querySelector(this).scrollTop > 400) {
+//         document.querySelector( ".header #background" ).fadeIn();
+//     } else {
+//         document.querySelector( ".header #background" ).fadeOut();
+//     }
+// });

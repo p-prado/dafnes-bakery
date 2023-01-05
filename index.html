@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dafne's Bakery Bakery</title>
+    <title>Dafne's Bakery</title>
     <!-- IMPORT FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +18,7 @@
 
 <body>
 <!-- SECTION: HEADER -->
-    <header>
+    <!-- <header>
         <div class="primary-header flex container">
             <h2 class="logo"><a href="#">Dafne's Bakery</a></h2>
             <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"><span
@@ -35,14 +35,30 @@
                 </ul>
             </nav>
         </div>
-    </header>
+    </header> -->
     <main>
         <!-- SECTION: HERO -->
         <div id="hero-section" class="hero">
-            <div class="container hero-container">
-                <h1 class="hero-title">Dafne's Bakery</h1>
-                <h3 class="hero-subtitle">¡Repostería de Calidad!</h3>
-                <a href="" class="button-primary hero-cta">Ver Pasteles</a>
+            <div class="container">
+                <div class="transparent-header">
+                    <h2 class="logo"><a href="#">Dafne's Bakery</a></h2>
+                    <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"><span
+                    class="sr-only">Menu</span></button>
+                    <nav>
+                        <ul id="transparent-navigation" class="transparent-navigation">
+                            <li><a href="#"  class="active">Inicio</a></li>
+                            <li><a href="#">Pasteles y Pies</a></li>
+                            <li><a href="#">Galletas</a></li>
+                            <li><a href="#">Otros</a></li>
+                            <li><a href="#">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="hero-content">
+                    <h1 class="hero-title">Dafne's Bakery</h1>
+                    <h3 class="hero-subtitle">¡Repostería de Calidad!</h3>
+                    <a href="#featured-section" class="button-primary hero-cta">Ver Pasteles</a>
+                </div>
             </div>
         </div>
         <!-- SECTION: PRODUCTOS DESTACADOS -->
@@ -151,7 +167,7 @@
         </div>
         <div class="copyright">
             <div class="container">
-                <p class="copyright-text">2022 © Dafne's Bakery | Website by <a href="#">Pablo Prado</a></p>
+                <p class="copyright-text">2022 © Dafne's Bakery</p>
             </div>
         </div>
     </footer>
