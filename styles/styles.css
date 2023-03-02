@@ -61,6 +61,9 @@ h6 {
 /* PRE DEFINED CLASSES */
 
 :root {
+
+    font-size: 16px;
+
     --color-primary: #3e064c;
     --color-primary-light: #ae8da7;
     --color-primary-light-hover:#cfafc8;
@@ -88,6 +91,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--color-background-light);
+    color: var(--color-text-dark);
     overflow-x: hidden;
 }
 
@@ -347,7 +351,7 @@ h2.section-heading {
     overflow: hidden;
 }
 
-/* TODO sCROP ALL IMAGES FOR THIS SECTION WITH A 3/2 ASPECT RATIO */
+/* TODO CROP ALL IMAGES FOR THIS SECTION WITH A 3/2 ASPECT RATIO */
 .card-img {
     border-radius: var(--card-border-radius) var(--card-border-radius) 0px 0px;
     transition: 0.75s all ease-in-out;
@@ -458,14 +462,17 @@ h2.section-heading {
 
 .testimonial-content {
     display: flex;
+    gap: 3rem;
+    margin: auto;
     align-items: center;
     justify-content: center;
+    max-width: 60rem;
 }
-
 .testimonial-img {
     border-radius: 50%;
-    margin-inline: 40px;
+    margin-inline: auto;
     max-height: 300px;
+    box-shadow: var(--box-shadow-light);
 }
 
 .testimonial-text {

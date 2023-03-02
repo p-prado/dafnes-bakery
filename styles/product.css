@@ -1,0 +1,80 @@
+/* PRODUCTS PAGE */
+
+/* NAVIGATION */
+header {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+}
+
+.transparent-navigation a:hover/*:not(.active)*/ {
+    background-color: rgba(255,255,255,0.1);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.7);
+    text-shadow: none;
+}
+
+body{
+    background-color: var(--color-background-light);
+    }
+/* PRODUCT */
+#product-section{
+    margin-block: 6rem 10rem;
+    
+}
+
+h1.product-title {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: var(--color-text-primary-dark);
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.product-img-container,
+.product-info {
+    /* background-color: rgba(0,0,0,0.1); */
+}
+
+.product-img-container {
+    overflow: hidden;
+    box-shadow: var(--box-shadow-light);
+    border-radius: 1rem;
+}
+.product-img {
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    transition: 0.75s transform ease-in-out;
+}
+.product-img-container:hover .product-img {
+    transform: scale(105%) translateY(-2%);
+}
+
+.product-info{
+    background-image: url("../assets/dafnes_bakery_primary_op25.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+    color: var(--color-primary-light);
+    color:hsl(313, 17%, 55%);
+}
+
+.product-info p {
+    margin-bottom: 2rem;
+}
+
+.product-price {
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
