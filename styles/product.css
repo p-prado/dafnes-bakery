@@ -34,11 +34,6 @@ h1.product-title {
     gap: 4rem;
 }
 
-.product-img-container,
-.product-info {
-    /* background-color: rgba(0,0,0,0.1); */
-}
-
 .product-img-container {
     overflow: hidden;
     box-shadow: var(--box-shadow-light);
