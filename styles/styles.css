@@ -84,6 +84,7 @@ h6 {
     --text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 
     --card-border-radius: 20px;
+    --button-border-radius: 5px;
 
     --section-padding: 8rem;
 }
@@ -162,7 +163,7 @@ h2.section-heading {
     font-weight: 300;
     padding: 15px 30px;
     background-color: var(--color-primary);
-    border-radius: 5px;
+    border-radius: var(--button-border-radius);
     text-shadow: none;
 }
 
@@ -295,18 +296,27 @@ h2.section-heading {
     text-align: center;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-track {
+    display: flex;
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
 }
 
 .card {
-    height: 100%;
+    flex-basis: calc(100% / 3 - 1.5rem);
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: 0.75rem 0.75rem;
+    /* flex-shrink: 0; */
     box-shadow: var(--box-shadow-light);
     background-color: var(--color-background-white);
     border-radius: var(--card-border-radius);
-    /* overflow: hidden; */
 }
 
 .card-img-container {
@@ -340,6 +350,48 @@ h2.section-heading {
 
 .card-body * {
     margin-block: 10px;
+}
+
+
+/* Slider Buttons */
+
+.slider-card--current {
+    transform: scale(1);
+    z-index: 1;
+}
+
+.slider-card--previous {
+    transform: translateX(-30%) scale(0.9);
+}
+
+.slider-card--next {
+    transform: translateX(30%) scale(0.9);
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--color-text-light);
+    border: none;
+    font-size: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: var(--button-border-radius);
+    cursor: pointer;
+}
+
+.slider-button:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.slider-button--left {
+    left: 0;
+}
+
+.slider-button--right {
+    right: 0;
 }
 
 
@@ -384,9 +436,21 @@ h2.section-heading {
     overflow: hidden;
     position: relative;
     z-index: 9;
+    display: none;
+    animation: fadeEffect 2s;
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+.slider-content-active {
+    display: block;
 }
 
 .slider-content img {
+    width: 100%;
     object-fit: cover;
     object-position: center center;
 }
@@ -418,6 +482,33 @@ h2.section-heading {
     font-size: 2.5rem;
 }
 
+.slider-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.75rem;
+}
+.slider-btn {
+    background-color: rgba(255, 255, 255, 0.4);
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    position: relative;
+    bottom: 2.5rem;
+    margin-bottom: -2rem;
+    z-index: 99;
+    cursor: pointer;
+    transition: background-color 300ms ease-in;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.slider-btn-active {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.slider-btn:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
 
 /* SECTION: TESTIMONIALS */
 
@@ -564,9 +655,9 @@ h2.section-heading {
 
     /* SEASONAL SECTION */
 
-    .slider-description {
-        /* max-width: 250px; */
-    }
+    /* .slider-description {
+        max-width: 250px;
+    } */
 
     .slider-description h3 {
         padding: 20px 30px;
