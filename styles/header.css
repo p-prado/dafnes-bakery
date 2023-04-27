@@ -1,0 +1,15 @@
+/* NAVIGATION */
+header {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+}
+
+.transparent-navigation a:hover/*:not(.active)*/ {
+    background-color: rgba(255,255,255,0.1);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.7);
+    text-shadow: none;
+}
+
+body{
+    background-color: var(--color-background-light);
+    }

@@ -40,6 +40,11 @@ setInterval(function () {
 
 
 
+
+
+
+// CARD SLIDER
+
 // Get elements from the DOM
 const sliderTrack = document.querySelector('.slider-track');
 const sliderCards = Array.from(document.querySelectorAll('.card'));
@@ -115,9 +120,3 @@ const updateSlider = () => {
 
 // Call the initSlider function to initialize the slider
 initSlider();
-
-
-
-
-
-

@@ -77,7 +77,6 @@ h6 {
     --color-background-light: #efeeef;
     --color-background-light-purple: #ae8da7;
     --color-background-dark: #1e0d33;
-
     --size-main-body-text: 1.2rem;
 
     --box-shadow-light: 4px 4px 10px 0px rgba(0, 0, 0, 0.2);
@@ -648,10 +647,6 @@ h2.section-heading {
     }
 
 
-    .grid-container {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-    }
 
     /* SEASONAL SECTION */
 
