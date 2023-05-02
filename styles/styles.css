@@ -445,10 +445,14 @@ h2.section-heading {
     max-height: 200px;
 } */
 
+#seasonal-slider {
+    position: relative;
+    background-color: var(--color-background-light-purple);
+}
+
 /* Make sure to crop images to the 2/1 aspect ratio! */
 .slider-content {
     width: 100%;
-    aspect-ratio: 2/1;
     overflow: hidden;
     position: relative;
     z-index: 9;
@@ -465,9 +469,10 @@ h2.section-heading {
     display: block;
 }
 
-.slider-content img {
+.slider-content img.slider-img {
     width: 100%;
     object-fit: cover;
+    aspect-ratio: 2/1;
     object-position: center center;
 }
 
@@ -485,8 +490,8 @@ h2.section-heading {
 }
 
 .slider-description img {
-    max-width: 200px;
-    margin-bottom: 20px;
+    max-width: 12.5rem;
+    margin-bottom: 1.25rem;
 }
 
 .slider-description h3 {
@@ -499,20 +504,24 @@ h2.section-heading {
 }
 
 .slider-controls {
+    position: absolute;
+    bottom: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 0.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
 }
+
 .slider-btn {
     background-color: rgba(255, 255, 255, 0.4);
     height: 1.5rem;
     width: 1.5rem;
     border-radius: 50%;
     position: relative;
-    bottom: 2.5rem;
-    margin-bottom: -2rem;
-    z-index: 99;
+    z-index: 12;
     cursor: pointer;
     transition: background-color 300ms ease-in;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
@@ -719,21 +728,15 @@ h2.section-heading {
         text-align: left;
       }
 
-    /* FEATURED SECTION */
-
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
-
     /* SEASONAL SECTION */
 
     .seasonal-heading-circle {
         height: 7.5rem;
     }
 
-    .slider-content {
+    /* .slider-content {
         overflow: visible;
-    }
+    } */
 
     .slider-description {
         position: static;
@@ -742,14 +745,14 @@ h2.section-heading {
         justify-content: center;
         gap: 1rem;
         background-color: var(--color-primary-light);
-        padding-block-start: 3rem;
+        padding-block-start: 2rem;
         max-width: 100%;
     }
 
     .slider-description img {
         padding: 0;
         margin: 0;
-        max-height: 4rem;
+        max-width: 4rem;
     }
 
     .slider-description h3 {
@@ -758,6 +761,19 @@ h2.section-heading {
         font-size: 2.5rem;
     }
 
+    .slider-controls {
+        position: relative;
+        bottom: 0rem;
+        left: 0%;
+        padding-top: 1.5rem;
+        transform: translateX(0);
+        /* background-color: var(--color-background-light-purple); */
+    }
+
+    .slider-btn {
+        height: 1.25rem;
+        width: 1.25rem;
+    }
 
 
 
@@ -814,8 +830,13 @@ h2.section-heading {
 
     .seasonal-heading-circle {
         height: 5rem;
-        width: 25rem;
-        border-radius: 1rem;
+        width: max-content;
+        padding-inline: 2.5rem;
+        max-width: 95%;
+        border-radius: 1.5rem;
+    }
+    .seasonal-heading-circle .section-heading {
+        font-size: 2.5rem;
     }
 
     .slider-description {
@@ -823,7 +844,7 @@ h2.section-heading {
     }
 
     .slider-description h3 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     /* TESTIMONIALS SECTION */
@@ -840,6 +861,16 @@ h2.section-heading {
         text-align: center;
     }
 
+
+
+}
+
+
+/* SMALL SCREENS | MOBILE */
+@media only screen and (max-width: 360px) {
+:root{
+    font-size: 12px;
+}
 
 
 }
