@@ -43,13 +43,20 @@ setInterval(function () {
 
 
 
-// CARD SLIDER
+// RESPONSIVE CARD SLIDER
 
 // Get elements from the DOM
 const sliderTrack = document.querySelector('.slider-track');
 const sliderCards = Array.from(document.querySelectorAll('.card'));
 const prevButton = document.querySelector('.slider-button--left');
 const nextButton = document.querySelector('.slider-button--right');
+
+const largeMediaQuery = window.matchMedia('(max-width: 1200px)');
+const mediumMediaQuery = window.matchMedia('(max-width: 960px)');
+const smallMediaQuery = window.matchMedia('(max-width: 768px)');
+
+let cardWidth = smallMediaQuery.matches ? 100 : mediumMediaQuery.matches ? 50 : 33.33;
+let cardsShown = smallMediaQuery.matches ? 1 : mediumMediaQuery.matches ? 2 : 3;
 
 // Set initial position of the slider
 let currentPosition = 0;
@@ -59,64 +66,73 @@ let autoScrollInterval = null;
 
 // Define function to start auto-scroll
 const startAutoScroll = () => {
-  // Set interval to change position and update slider every second
-  autoScrollInterval = setInterval(() => {
-    currentPosition = currentPosition < sliderCards.length - 3 ? currentPosition + 1 : 0;
-    updateSlider();
-  }, 10000);
+    // Set interval to change position and update slider every second
+    autoScrollInterval = setInterval(() => {
+        currentPosition = currentPosition < sliderCards.length - cardsShown ? currentPosition + 1 : 0;
+        updateSlider();
+    }, 6000);
 };
 
 // Define function to stop auto-scroll
 const stopAutoScroll = () => {
-  clearInterval(autoScrollInterval);
+    clearInterval(autoScrollInterval);
 };
 
 // Define function to restart auto-scroll
 const restartAutoScroll = () => {
-  stopAutoScroll();
-  startAutoScroll();
+    stopAutoScroll();
+    startAutoScroll();
 };
 
 // Define function to initialize the slider
 const initSlider = () => {
-  // Start auto-scrolling
-  startAutoScroll();
+    // Start auto-scrolling
+    startAutoScroll();
 
-  // Add event listeners to stop and restart auto-scroll on mouseenter and mouseleave of slider track
-  sliderTrack.addEventListener('mouseenter', stopAutoScroll);
-  sliderTrack.addEventListener('mouseleave', restartAutoScroll);
+    // Add event listeners to stop and restart auto-scroll on mouseenter and mouseleave of slider track
+    sliderTrack.addEventListener('mouseenter', stopAutoScroll);
+    sliderTrack.addEventListener('mouseleave', restartAutoScroll);
 
-  // Add event listeners to prev and next buttons to change position and update slider
-  prevButton.addEventListener('click', () => {
-    currentPosition = currentPosition > 0 ? currentPosition - 1 : 0;
-    updateSlider();
-  });
-  nextButton.addEventListener('click', () => {
-    currentPosition = currentPosition < sliderCards.length - 3 ? currentPosition + 1 : sliderCards.length - 3;
-    updateSlider();
-  });
+    // Add event listeners to prev and next buttons to change position and update slider
+    prevButton.addEventListener('click', () => {
+        currentPosition = currentPosition > 0 ? currentPosition - 1 : 0;
+        updateSlider();
+    });
+    nextButton.addEventListener('click', () => {
+        currentPosition = currentPosition < sliderCards.length - cardsShown ? currentPosition + 1 : sliderCards.length - cardsShown;
+        updateSlider();
+    });
 };
 
 // Define function to update the slider
 const updateSlider = () => {
-  // Move slider track to show current position
-  sliderTrack.style.transform = `translateX(-${currentPosition * 33.33}%)`;
+    // Move slider track to show current position
+    // Move the slider the required amount according to the media query currently in use.
+    sliderTrack.style.transform = `translateX(-${currentPosition * cardWidth}%)`;
 
-  // Add classes to cards to show current, previous, and next cards
-  sliderCards.forEach((card, index) => {
-    card.classList.remove('slider-card--current');
-    card.classList.remove('slider-card--previous');
-    card.classList.remove('slider-card--next');
 
-    if (index === currentPosition) {
-      card.classList.add('slider-card--current');
-    } else if (index < currentPosition) {
-      card.classList.add('slider-card--previous');
-    } else if (index > currentPosition + 2) {
-      card.classList.add('slider-card--next');
-    }
-  });
+    // Add classes to cards to show current, previous, and next cards
+    sliderCards.forEach((card, index) => {
+        card.classList.remove('slider-card--current');
+        card.classList.remove('slider-card--previous');
+        card.classList.remove('slider-card--next');
+
+        if (index === currentPosition) {
+            card.classList.add('slider-card--current');
+        } else if (index < currentPosition) {
+            card.classList.add('slider-card--previous');
+        } else if (index > currentPosition + 2) {
+            card.classList.add('slider-card--next');
+        }
+    });
 };
 
 // Call the initSlider function to initialize the slider
 initSlider();
+
+// On resize, reevaluate the values for the card width and cards shown.
+window.addEventListener('resize', function(){
+    cardWidth = smallMediaQuery.matches ? 100 : mediumMediaQuery.matches ? 50 : 33.33;
+    cardsShown = smallMediaQuery.matches ? 1 : mediumMediaQuery.matches ? 2 : 3;
+    updateSlider();
+});
