@@ -16,34 +16,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
-    <script src="nav.js" defer></script>
-    <script src="slider.js" defer></script>
+    <script src="js/nav.js" defer></script>
+    <script src="js/slider.js" defer></script>
 </head>
 
 <body>
-<!-- SECTION: HEADER -->
-    <!-- <header>
-        <div class="primary-header flex container">
-            <h2 class="logo"><a href="#">Dafne's Bakery</a></h2>
-            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"><span
-                    class="sr-only">Menu</span></button>
-            <nav>
-                <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
-                    <li class="active">
-                        <a href="#">Inicio</a>
-                    </li>
-                    <li><a href="#">Pasteles y Pies</a></li>
-                    <li><a href="#">Galletas</a></li>
-                    <li><a href="#">Otros</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header> -->
     <main>
         <!-- SECTION: HERO -->
-        <div id="hero-section" class="hero">
+        <section id="hero-section" class="hero">
             <div class="container">
+                
+                <!-- HEADER -->
                 <div class="transparent-header">
                     <h2 class="logo"><a href="#">Dafne's Bakery</a></h2>
                     <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"><span
@@ -51,21 +34,23 @@
                     <nav>
                         <ul id="transparent-navigation" class="transparent-navigation">
                             <li><a href="#"  class="active">Inicio</a></li>
-                            <li><a href="/dafnes-bakery/category.html">Pasteles y Pies</a></li>
+                            <li><a href="/dafnes-bakery/views/category.html">Pasteles y Pies</a></li>
                             <li><a href="#">Galletas</a></li>
                             <li><a href="#">Otros</a></li>
                             <li><a href="#">Contacto</a></li>
-                            <li class="icon"><a href="javascript:void(0);" onclick="makeNavMobile()"><i class="fa fa-bars"></i></a></li>
+                            <!-- <li class="icon"><a href="javascript:void(0);" onclick="makeNavMobile()"><i class="fa fa-bars"></i></a></li> -->
                         </ul>
                     </nav>
                 </div>
+
+                <!-- HERO -->
                 <div class="hero-content">
                     <h1 class="hero-title">Dafne's Bakery</h1>
                     <h3 class="hero-subtitle">¡Repostería de Calidad!</h3>
                     <a href="#featured-section" class="button-primary hero-cta">Ver Pasteles</a>
                 </div>
             </div>
-        </div>
+        </section>
         <!-- SECTION: PRODUCTOS DESTACADOS -->
         <div class="featured-section">
             <div class="container">
@@ -82,7 +67,7 @@
                                 <h3 class="card-title">Tartaleta de Frutas</h3>
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At autem iste
                                     molestias nisi, vel ex optio rem cum id ratione nobis distinctio</p>
-                                <a href="product.html" class="button-primary card-cta">Comprar</a>
+                                <a href="dafnes-bakery/views/product.html" class="button-primary card-cta">Comprar</a>
                             </div>
                         </div>
 
@@ -95,7 +80,7 @@
                                 <h3 class="card-title">Pastel Tiramisú</h3>
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At autem iste
                                     molestias nisi, vel ex optio rem cum id ratione nobis distinctio</p>
-                                <a href="chocolate.html" class="button-primary card-cta">Comprar</a>
+                                <a href="dafnes-bakery/views/chocolate.html" class="button-primary card-cta">Comprar</a>
                             </div>
                         </div>
 
@@ -107,7 +92,7 @@
                                 <h3 class="card-title">Pastel de Fresa</h3>
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At autem iste
                                     molestias nisi, vel ex optio rem cum id ratione nobis distinctio</p>
-                                <a href="shortcake.html" class="button-primary card-cta">Comprar</a>
+                                <a href="dafnes-bakery/views/shortcake.html" class="button-primary card-cta">Comprar</a>
                             </div>
                         </div>
 
@@ -120,7 +105,7 @@
                                 <h3 class="card-title">Pie de Manzana</h3>
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At autem iste
                                     molestias nisi, vel ex optio rem cum id ratione nobis distinctio</p>
-                                <a href="product.html" class="button-primary card-cta">Comprar</a>
+                                <a href="dafnes-bakery/views/product.html" class="button-primary card-cta">Comprar</a>
                             </div>
                         </div>
 
@@ -133,7 +118,7 @@
                                 <h3 class="card-title">Chocolate Chip Cookies</h3>
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At autem iste
                                     molestias nisi, vel ex optio rem cum id ratione nobis distinctio</p>
-                                <a href="chocolate.html" class="button-primary card-cta">Comprar</a>
+                                <a href="dafnes-bakery/views/chocolate.html" class="button-primary card-cta">Comprar</a>
                             </div>
                         </div>
 
@@ -146,7 +131,7 @@
                                 <h3 class="card-title">Baklava</h3>
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At autem iste
                                     molestias nisi, vel ex optio rem cum id ratione nobis distinctio</p>
-                                <a href="product.html" class="button-primary card-cta">Comprar</a>
+                                <a href="dafnes-bakery/views/product.html" class="button-primary card-cta">Comprar</a>
                             </div>
                         </div>
 
@@ -159,7 +144,7 @@
                                 <h3 class="card-title">Cheesecake</h3>
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At autem iste
                                     molestias nisi, vel ex optio rem cum id ratione nobis distinctio</p>
-                                <a href="chocolate.html" class="button-primary card-cta">Comprar</a>
+                                <a href="dafnes-bakery/views/chocolate.html" class="button-primary card-cta">Comprar</a>
                             </div>
                         </div>
 

@@ -1,0 +1,28 @@
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+thead{
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--color-background-light);
+}
+tbody tr:nth-child(even) {
+    background-color: white;
+}
+
+th, td {
+    border: 2px solid var(--color-primary);
+    margin: 0;
+    padding: 0;
+}
