@@ -5,8 +5,31 @@ header{
     justify-content: space-between;
 }
 
+/* TEMPORARY */
+body {
+    min-height: 100vh;
+}
+
+main {
+    margin-block: 4rem 7rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 4rem;
+    margin-block: 3rem;
+}
+
+a.button-primary {
+    float:right;
+    margin-top: -4rem;
+    padding: 10px 20px;
+    font-size: calc(var(--size-main-body-text) - 0.3rem);
+}
+
 table {
     border-collapse: collapse;
+    width: 100%;
 }
 
 thead{
@@ -22,7 +45,17 @@ tbody tr:nth-child(even) {
 }
 
 th, td {
-    border: 2px solid var(--color-primary);
+    border: 1px solid #cccccc;
     margin: 0;
-    padding: 0;
+    padding: 10px;
+    cursor: default;
+}
+
+td.id,
+td.actions {
+    text-align: center;
+}
+
+td.actions a:hover {
+    color: var(--color-primary-light);
 }

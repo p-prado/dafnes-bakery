@@ -12,58 +12,79 @@
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <!-- ATTEMPT TO IMPORT FONT AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/b4e0939b37.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="../assets/favicon.png">
     <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/dashboard.css">
 </head>
 <body>
-    <header>
-        <h1>Dafne's Bakery</h1>
-        <p>menu</p>
-    </header>
+<!-- SECTION: HEADER -->
+<header>
+    <div class="container">
+        <div class="transparent-header">
+            <h2 class="logo"><a href="#">Dafne's Bakery</a></h2>
+            <nav>
+                <ul id="transparent-navigation" class="transparent-navigation">
+                    <li><a href="dafnes-bakery/index.html">Inicio</a></li>
+                    <li><a href="#">Pasteles y Pies</a></li>
+                    <li><a href="#">Galletas</a></li>
+                    <li><a href="#">Otros</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
 
     <main>
         <div class="container">
+            <h1>Productos</h1>
+            <a class="button-primary" href="#" >Add New</a>
             <table>
                 <thead>
                         <th>ID</th>
                         <th>Nombre</th>
-                        <th>Descripción</th>
+                        <th class="description">Descripción</th>
                         <th>Acciones</th>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>3</td>
+                        <td class="id">3</td>
                         <td>Pastel de Chocolate</td>
-                        <td>Delicioso pastel de Lorem ipsum dolor sit amet consectetur adipisicing elit. Non blanditiis praesentium nobis incidunt ad minus consequuntur fugit culpa, voluptate eos enim libero commodi quod neque eveniet atque? Autem, voluptatum. A!</td>
-                        <td>Editar | Eliminar</td>
+                        <td class="description">Delicioso pastel de Lorem ipsum dolor sit amet consectetur adipisicing elit. Non blanditiis praesentium</td>
+                        <td class="actions"><a href=""><i class="fa-regular fa-pen-to-square"></i></a> | <a href=""><i class="fa-regular fa-trash-can"></i></a></td>
                     </tr>
                     <tr>
-                        <td>7</td>
+                        <td class="id">7</td>
                         <td>Flan de Chocolate</td>
-                        <td>Delicioso pastel de Lorem ipsum dolor sit amet consectetur adipisicing elit. Non blanditiis praesentium nobis incidunt ad minus consequuntur fugit culpa, voluptate eos enim libero commodi quod neque eveniet atque? Autem, voluptatum. A!</td>
-                        <td>Editar | Eliminar</td>
+                        <td class="description">Delicioso pastel de Lorem ipsum dolor sit amet consectetur adipisicing elit. Non blanditiis praesentium</td>
+                        <td class="actions"><a href=""><i class="fa-regular fa-pen-to-square"></i></a> | <a href=""><i class="fa-regular fa-trash-can"></i></a></td>
                     </tr>
                     <tr>
-                        <td>4</td>
+                        <td class="id">4</td>
                         <td>Pastel de Frambuesa</td>
-                        <td>Delicioso pastel de Lorem ipsum dolor sit amet consectetur adipisicing elit. Non blanditiis praesentium nobis incidunt ad minus consequuntur fugit culpa, voluptate eos enim libero commodi quod neque eveniet atque? Autem, voluptatum. A!</td>
-                        <td>Editar | Eliminar</td>
+                        <td class="description">Delicioso pastel de Lorem ipsum dolor sit amet consectetur adipisicing elit. Non blanditiis praesentium</td>
+                        <td class="actions"><a href=""><i class="fa-regular fa-pen-to-square"></i></a> | <a href=""><i class="fa-regular fa-trash-can"></i></a></td>
                     </tr>
                     <tr>
-                        <td>28</td>
+                        <td class="id">28</td>
                         <td>Tres Leches</td>
-                        <td>Delicioso pastel de Lorem ipsum dolor sit amet consectetur adipisicing elit. Non blanditiis praesentium nobis incidunt ad minus consequuntur fugit culpa, voluptate eos enim libero commodi quod neque eveniet atque? Autem, voluptatum. A!</td>
-                        <td>Editar | Eliminar</td>
+                        <td class="description">Delicioso pastel de Lorem ipsum dolor sit amet consectetur adipisicing elit. Non blanditiis praesentium</td>
+                        <td class="actions"><a href=""><i class="fa-regular fa-pen-to-square"></i></a> | <a href=""><i class="fa-regular fa-trash-can"></i></a></td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </main>
 
+    <!-- SECTION: FOOTER -->
     <footer>
-        <p>Dafne's Bakery &copy; 2023</p>
+         <div class="copyright">
+            <div class="container">
+                <p class="copyright-text">2022 © Dafne's Bakery</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

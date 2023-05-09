@@ -97,11 +97,13 @@ body {
 }
 
 p,
-a {
+a,
+table {
     font-family: 'Montserrat', sans-serif;
 }
 
-p {
+p,
+a {
     font-size: var(--size-main-body-text);
     line-height: 1.7rem;
 }
