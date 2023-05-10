@@ -64,6 +64,8 @@ h6 {
 
     font-size: 16px;
 
+    --font-family-header: 'Dancing Script', cursive;
+    --font-family-body: 'Montserrat', sans-serif;
     --color-primary: #3e064c;
     --color-primary-light: #ae8da7;
     --color-primary-light-hover: #cfafc8;
@@ -99,7 +101,7 @@ body {
 p,
 a,
 table {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-family-body);
 }
 
 p,
@@ -112,7 +114,7 @@ h1,
 h2,
 h1 a,
 h2 a {
-    font-family: 'Dancing Script', cursive;
+    font-family: var(--font-family-header);
     font-weight: 500;
 }
 
@@ -161,7 +163,7 @@ h2.section-heading {
     color: var(--color-text-light);
     font-size: var(--size-main-body-text);
     font-weight: 300;
-    padding: 15px 30px;
+    padding: 0.9rem 1.8rem;
     background-color: var(--color-primary);
     border-radius: var(--button-border-radius);
     text-shadow: none;

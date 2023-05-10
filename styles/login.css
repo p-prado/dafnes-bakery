@@ -1,0 +1,32 @@
+main{
+    text-align: center;
+    margin-block: var(--section-padding);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 350px;
+    margin: 1rem auto;
+    font-family: var(--font-family-body);
+}
+
+form input {
+    padding: 0.9rem;
+    border-radius: 0.5rem;
+    border: 2px solid transparent;
+
+}
+
+form input:focus-visible {
+    outline: 3px solid var(--color-primary);
+}
+
+button.button-primary {
+    cursor: pointer;
+}
